@@ -10,20 +10,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>User List</h1>
-
+        
+    <h1>User List</h1>
+    <div class="row">
+            <div class="col-md-6">
+                <a href="views/create_user.php" class="btn btn-primary btn-add-student">Add Student</a>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search" placeholder="Search by name" onkeydown="handleEnterKey(event)">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="searchStudents()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Search Bar -->
-        <div class="input-group">
+        <!-- <div class="input-group">
         <input type="text" class="form-control" id="search" placeholder="Search by name" onkeydown="handleEnterKey(event)">
  <div class="input-group-append">
                 <button class="btn btn-primary" type="button" onclick="searchStudents()">Search</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- User List Table -->
         <?php
         // Include the database configuration file
         include("./../config/database.php");
+        
 
         // Fetch the list of users from the database
         $sql = "SELECT * FROM students";
@@ -64,7 +79,6 @@
         $conn->close();
         ?>
     </div>
-
     <!-- Add Bootstrap JavaScript (Place this before your custom JavaScript) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -72,6 +86,7 @@
 
 
     <!-- Add this JavaScript code in the <head> section of your HTML -->
+<script src="./../assets/js/autosuggest.js"></script>
 <script src="./../assets/js/autosuggest.js"></script>
 
 </body>

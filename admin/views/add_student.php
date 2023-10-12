@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // JavaScript code for the pop-up and redirection
         echo '<script>';
         echo 'alert("Student profile created successfully");';
-        echo 'window.location.href = "./create.php";';
+        echo 'window.location.href = "./../dashboard.php";';
         echo '</script>';
 
     } else {

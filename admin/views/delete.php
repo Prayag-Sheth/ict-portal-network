@@ -1,5 +1,5 @@
 <?php
-include("../config/database.php");
+include("../../config/database.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $studentId = $_GET["id"];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
 }
 
 // Redirect back to the dashboard after deleting or if there was an error
-echo "<script>window.location.href = 'dashboard.php';</script>";
+echo "<script>window.location.href = './../dashboard.php';</script>";
 
 $conn->close();
 ?>

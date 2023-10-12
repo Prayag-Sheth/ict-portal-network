@@ -12,15 +12,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-function getBlogPosts() {
-    global $conn;
-    $sql = "SELECT * FROM posts";
-    $result = $conn->query($sql);
+// function getBlogPosts() {
+//     global $conn;
+//     $sql = "SELECT * FROM posts";
+//     $result = $conn->query($sql);
     
-    if ($result->num_rows > 0) {
-        return $result->fetch_all(MYSQLI_ASSOC);
-    } else {
-        return [];
-    }
-}
-?>
+//     if ($result->num_rows > 0) {
+//         return $result->fetch_all(MYSQLI_ASSOC);
+//     } else {
+//         return [];
+//     }
+// }
+// ?>
