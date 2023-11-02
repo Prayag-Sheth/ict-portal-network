@@ -1,4 +1,4 @@
-// admin/views/edit.php
+<!-- admin/views/edit.php -->
 
 <?php
 include("../config/database.php");
@@ -39,5 +39,3 @@ if (isset($_GET["id"])) {
     $row = $result->fetch_assoc();
 }
 ?>
-<!-- HTML form for editing student record (pre-populated with existing data) -->
-<!-- ... -->

@@ -1,3 +1,57 @@
+<?php
+// $output = shell_exec('python3 common/assets/python_script/profile_fetch.py');
+// $data = json_decode($output, true);
+
+// if (empty($data)) {
+//     echo "Error: No data received from the Python script.";
+// } else {
+//     // Check if specific keys exist before accessing them
+//     if (isset($data['full_name'])) {
+//         echo "Full Name: " . $data['full_name'];
+//     } else {
+//         echo "Full Name not found in the data.";
+//     }
+
+//     if (isset($data['headline'])) {
+//         echo "Headline: " . $data['headline'];
+//     } else {
+//         echo "Headline not found in the data.";
+//     }
+
+//     if (isset($data['location'])) {
+//         echo "Location: " . $data['location'];
+//     } else {
+//         echo "Location not found in the data.";
+//     }
+
+//     // Add more fields as needed
+// }
+?>
+
+
+
+<?php
+// $api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin';
+// $linkedin_profile_url = 'https://www.linkedin.com/in/krunaltrivedi2601';
+// $api_key = 'a7aT5GPt_jw5kDRMtZkLog'; // Removed extra characters
+
+// $ch = curl_init($api_endpoint . '?url=' . $linkedin_profile_url . '&skills=include');
+// curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $api_key));
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+// $response = curl_exec($ch);
+
+// if ($response) {
+//     $profile_data = json_decode($response, true);
+//     echo "Full Name: " . $profile_data['full_name'];
+// } else {
+//     echo "cURL request failed.";
+// }
+
+// curl_close($ch);
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -18,9 +72,6 @@
 <style></style>
 
 <body>
-
-
-
 
     <div class="container mt-5 ">
         <?php
@@ -47,8 +98,13 @@
                 echo '</div>';
 
                 //left div
+
+// $output = shell_exec('common/assets/python_script/profile_fetch.py');
+// echo "Full Name: " . $output;
+
                 echo '<div class="col-md-5 border grid gap-0 column-gap-3 ">';
                 echo '<h1 class="display-4 row" style=padding: 0px; margin: 0px;>' . $user['name'] . '</h1>';
+                // echo '<h1 class="display-4 row" style=padding: 0px; margin: 0px;>' . $output . '</h1>';
                 // Display current job company
                 if (!empty($user['current_job_company'])) {
                     echo '<p>' . $user['current_job_company'] . '</span></p>';
