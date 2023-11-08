@@ -174,7 +174,9 @@
                 }
 
                 // Update button
-                echo '<button type="button" id="updateButton" class="btn btn-success mt-3">Update</button>';
+                echo'a href="../admin/views/update.php?id=' . $user['id'] . '"";">Update</a>';
+                echo '<button type="button" onclick="window.location.href="../admin/views/update.php?id=' . $user['id'] . '"";">Update</button>';
+                
                 echo '</form>';
                 echo '</div>'; //Clsoing left div
 
@@ -285,38 +287,6 @@
 
 
 
-    <!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <form id="profileForm" action="update.php?id=<?php echo $userId; ?>" method="post">
-            <div class="row">
-                <!-- Left Column: User Details -->
-                <div class="col-md-5 border grid gap-0 column-gap-3">
-                    <h1 class="display-4 row" style="padding: 0px; margin: 0px;">
-                        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>" disabled>
-                    </h1>
-
-                    <!-- Display other user details as input fields, e.g., current_job_company, domain_of_work, etc. -->
-                    <!-- Example: -->
-                    <p>
-                        <input type="text" name="current_job_company" value="<?php echo $user['current_job_company']; ?>" disabled>
-                    </p>
-
-                    <!-- Add more input fields for other user details as needed -->
-                    <!-- Example: -->
-                    <p>
-                        <input type="text" name="domain_of_work" value="<?php echo $user['domain_of_work']; ?>" disabled>
-                    </p>
-                </div>
-
-                <!-- Right Column: Profile Picture and Buttons -->
-                <div class="col-md-3 text-right">
-                    <button type="button" class="btn" id="editButton" onclick="toggleEditMode()">Edit</button>
-                    <button type="button" class="btn" id="cancelButton" style="display: none;" onclick="cancelEditMode()">Cancel</button>
-                    <button type="button" class="btn btn-success" id="updateButton" style="display: none;" onclick="saveUpdates()">Save</button>
-
-                    <!-- Rest of your right column content -->
-                </div>
-            </div>
-        </form>
 
         <!-- Delete Confirmation Modal and other content -->
         <!-- Your modals and other content here -->

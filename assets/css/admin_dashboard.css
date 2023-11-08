@@ -50,7 +50,10 @@ body {
 
 body{margin-top:20px;}
 
+.skill_class{
+	width: 20px;
 
+}
 /* USER LIST TABLE */
 .user-list tbody td > img {
     position: relative;

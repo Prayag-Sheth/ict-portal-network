@@ -106,7 +106,7 @@
                 </td>
                         <td> <a href="mailto:' . $row['email'] . '">'. $row['email'] .'</a></td>
                         <td><a href="' . $row['linkedin_link'] . '">Linked in: <br>'. $row['name'].'<a></td>
-                        <td>' . $row['skills'] . '</td>
+                        <td class="skill_class">' . $row['skills'] . '</td>
                        <td>' . $row['interests'] . '</td>
                         <td>' . $row['current_job_company'] . '</td>
                         <td>' . $row['domain_of_work'] . '</td>
